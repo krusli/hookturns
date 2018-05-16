@@ -2,7 +2,8 @@
 
 <img src="assets/img/logo_b.png" width="30%">
 
-An INFO30005 Web Information Technologies project.  
+An INFO30005 Web Information Technologies project.
+
 Hook/Turns is a tram journey planning tool, much like TramTracker, but with the addition of crowdsourced crowding and disruption reports to plan your journey better.
 
 ### Dependencies
