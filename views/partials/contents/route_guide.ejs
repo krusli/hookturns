@@ -1,0 +1,253 @@
+	<!-- Jumbotron -->
+	<div class="jumbotron">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-3">
+					<h3>ROUTE GUIDE</h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-3">
+					<h1>96</h1>
+				</div>
+				<div class="col-sm-7">
+					<h3>EAST BRUNSWICK - ST KILDA BEACH</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+
+		<!-- Terminus stops -->
+		<div class="terminus-stops">
+			<div class="row">
+				<div class="col-sm-6">
+					<h3>EAST BRUNSWICK</h3>
+				</div>
+				<div class="col-sm-6 hidden-xs" style="text-align: right">
+					<h3>ST KILDA BEACH</h3>
+				</div>
+			</div>
+		</div>
+
+		<!-- ================================================================ -->
+		<!-- Table Container -->
+		<div class="table-responsive">
+		<div class="col-xs-12 hidden-xs">
+		  <table class="table">
+		    <thead>
+   				<tr>
+						<%route96Data.forEach(function(item,index){%>
+							<td>
+								<canvas class="horizontal-r_canvas">
+									Your browser does not support the HTML5 canvas tag.
+								</canvas>
+							</td>
+						<%});%>
+   				</tr>
+		    </thead>
+		    <tbody>
+					<tr>
+						<%route96Data.forEach(function(item,index){%>
+							<td>
+								<h3><%=item.stop_name%></h3>
+								<a class="btn btn-default"
+								href="https://www.google.com/maps?q=
+								<%=item.stop_latitude %>,<%=item.stop_longitude %>"
+								role="button">View Map</a>
+							</td>
+						<%});%>
+		      </tr>
+		    </tbody>
+		  </table>
+		 </div>
+
+		<div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+		<table cellpadding="0" border="0" cellspacing="0">
+			<%route96Data.forEach(function(item,index){%>
+			<tr>
+				<td>
+					<canvas class="vertical-r_canvas">
+						Your browser does not support the HTML5 canvas tag.
+					</canvas>
+				</td>
+				<td>
+					<h3><%=item.stop_name%></h3>
+					<a class="btn btn-default"
+					href="https://www.google.com/maps?q=
+					<%=item.stop_latitude %>,<%=item.stop_longitude %>"
+					role="button">View Map</a>
+				</td>
+			</tr>
+			<%});%>
+		</table>
+		</div>
+	</div>
+
+		<script type="text/javascript">
+			var draw_canvas_horizontal = function() {
+				var c_array = document.getElementsByClassName("horizontal-r_canvas");
+
+				for (var i = 0; i < c_array.length; i++) {
+		        var c = c_array[i];
+						c.width = 300;
+		        c.height = 30;
+		    }
+
+			    for (var i = 0; i < c_array.length; i++) {
+			      var c = c_array[i];
+			      var ctx = c.getContext("2d");
+
+						ctx.beginPath();
+						ctx.rect(0,7.5,300,15);
+						ctx.fillStyle = "#c6168d";
+						ctx.fill();
+
+						ctx.beginPath();
+						ctx.arc(150,15,15,0,2*Math.PI);
+						ctx.fillStyle = "white";
+						ctx.stroke();
+						ctx.fill();
+				  }
+			}
+
+			var draw_canvas_vertical = function() {
+				var c_array = document.getElementsByClassName("vertical-r_canvas");
+
+				for (var i = 0; i < c_array.length; i++) {
+		        var c = c_array[i];
+						c.width = 50;
+		        c.height = 150;
+		    }
+
+			    for (var i = 0; i < c_array.length; i++) {
+			      var c = c_array[i];
+			      var ctx = c.getContext("2d");
+
+						ctx.beginPath();
+						ctx.rect(7.5,0,15,155);
+						ctx.fillStyle = "#c6168d";
+						ctx.fill();
+
+						ctx.beginPath();
+						ctx.arc(15,75,15,0,2*Math.PI);
+						ctx.fillStyle = "white";
+						ctx.stroke();
+						ctx.fill();
+				  }
+			}
+
+			draw_canvas_horizontal();
+			draw_canvas_vertical();
+
+		</script>
+
+		<!-- ================================================================ -->
+
+		<!-- move teminus station to bottom instead of top right -->
+		<div class="terminus-stops">
+			<div class="row">
+				<div class="col-xs-6 hidden-xs">
+					<!-- <h3>EAST BRUNSWICK</h3> -->
+				</div>
+				<div class="col-xs-6 hidden-sm hidden-md hidden-lg hidden-xl">
+					<h3>ST KILDA BEACH</h3>
+				</div>
+			</div>
+		</div>
+
+		<!-- Around a stop -->
+		<div class="around-stop">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="jumbotron vertical-center-flexbox">
+						<div class="container">
+							<h3>AROUND SOUTH MELBOURNE MARKET - STOP 127</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-7">
+				<div class="row">
+					<div class="col-xs-12">
+						<h4>Top picks</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-5 col-xs-6">
+						<div class="boxes-loc center-flexbox"
+						style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(img/south_melbourne_market.jpg);">
+							<p>South Melbourne Market</p>
+						</div>
+					</div>
+					<div class="col-sm-5 col-xs-6">
+						<div class="boxes-loc center-flexbox"
+						style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(img/town_hall.jpg);">
+							<p>South Melbourne - Town Hall</p>
+						</div>
+					</div>
+					<div class="col-sm-2 center-flexbox button-loc">
+						<button type="button" class="btn btn-default">More</button>
+					</div>
+				</div>
+
+				</br>	<!-- for padding -->
+
+				<div class="row">
+					<div class="col-xs-12">
+						<h4>Food</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-5 col-xs-6">
+						<div class="boxes-loc center-flexbox"
+						style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(img/left_handed_chef.jpg);">
+							<p>Left Handed Chef</p>
+						</div>
+					</div>
+					<div class="col-sm-5 col-xs-6">
+						<div class="boxes-loc center-flexbox"
+						style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(img/st_ali.jpg);">
+							<p>St Ali</p>
+						</div>
+					</div>
+					<div class="col-sm-2 center-flexbox button-loc">
+						<button type="button" class="btn btn-default">More</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-5">
+				<div id="map"></div>
+			</div>
+		</div>
+
+		<!-- inline JS for Google Maps, TODO move to separate .JS file -->
+		<script type="text/javascript">
+		function initMap() {
+        // var uluru = {lat: -25.363, lng: 131.044};
+				var southMelbourne = {lat: -37.8331993, lng: 144.9553748};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center: southMelbourne
+        });
+        var marker = new google.maps.Marker({
+          position: southMelbourne,
+          map: map
+        });
+      }
+    </script>
+
+		<!-- Yes, the API key has to be embedded in HTML. The usage can be restricted to specific domains though. -->
+		<!-- See http://stackoverflow.com/questions/1364858/what-steps-should-i-take-to-protect-my-google-maps-api-key -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1Zp2gR2b1xhyoXCa3lYiB-V0ZUkjjNmA&callback=initMap"
+    async defer></script>
+
+
+	</div>
