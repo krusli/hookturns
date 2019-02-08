@@ -10,20 +10,20 @@
   "author": "HookTurns",
   "license": "BSD-2-Clause",
   "dependencies": {
-    "bluebird": "^3.5.1",
-    "body-parser": "~1.17.1",
-    "concurrently": "^3.4.0",
-    "cors": "^2.8.3",
+    "bluebird": "^3.5.3",
+    "body-parser": "^1.18.3",
+    "concurrently": "^3.6.1",
+    "cors": "^2.8.5",
     "ejs": "~2.5.6",
-    "express": "~4.15.2",
+    "express": "^4.16.4",
     "google-auth-library": "^0.10.0",
     "mongoose": "~4.9.5",
-    "nodemon": "^1.11.0",
-    "request": "^2.81.0",
+    "nodemon": "^1.18.9",
+    "request": "^2.88.0",
     "requests": "~0.1.7",
-    "typescript": "^2.3.2"
+    "typescript": "^2.9.2"
   },
   "devDependencies": {
-    "@angular/cli": "^6.0.1"
+    "@angular/cli": "^6.2.9"
   }
 }
